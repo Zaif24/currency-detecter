@@ -1,0 +1,23 @@
+# secrets — NEVER commit
+.streamlit/secrets.toml
+.env
+*.env
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# vector store (regenerate via `python -m rag.ingest`)
+vectorstore/*
+!vectorstore/.gitkeep
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
+
+# large local datasets (do not commit raw image datasets)
+data/currency_images/
